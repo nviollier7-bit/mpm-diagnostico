@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><title>MPM – Diagnóstico de dolores</title>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPM – Diagnóstico de dolores 2026</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -7,46 +8,42 @@ body{background:#000;font-family:system-ui,sans-serif}
 .mpm-wrap{position:relative;width:100%;overflow:hidden;user-select:none}
 .mpm-img{width:100%;display:block}
 .overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.04) 0%,rgba(0,0,0,.38) 100%);pointer-events:none}
-.header{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:rgba(0,0,0,.62);backdrop-filter:blur(3px)}
-.header-brand{font-size:17px;font-weight:700;color:#E8500A;letter-spacing:.1em}
-.header-sub{font-size:9px;color:rgba(255,255,255,.48);margin-top:1px}
-.header-tag{font-size:9px;background:#E8500A;color:#fff;padding:3px 11px;border-radius:20px;letter-spacing:.04em}
-
+.header{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(0,0,0,.62);backdrop-filter:blur(3px)}
+.header-brand{font-size:16px;font-weight:700;color:#E8500A;letter-spacing:.1em}
+.header-sub{font-size:9px;color:rgba(255,255,255,.45);margin-top:1px}
+.header-tag{font-size:9px;background:#E8500A;color:#fff;padding:3px 10px;border-radius:20px}
 .scene{position:absolute;inset:0}
-
 .pin{position:absolute;transform:translate(-50%,-100%);cursor:pointer;display:flex;flex-direction:column;align-items:center;z-index:10;transition:transform .15s}
 .pin:hover{transform:translate(-50%,-100%) scale(1.13)}
 .pin-pulse{position:absolute;top:0;left:50%;transform:translate(-50%,0);width:34px;height:34px;border-radius:50%;border:2px solid var(--pc);animation:pulse 2.2s ease-out infinite}
 @keyframes pulse{0%{transform:translate(-50%,0) scale(1);opacity:.6}100%{transform:translate(-50%,0) scale(2.6);opacity:0}}
 .pin-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2.5px solid #fff;color:#fff;font-size:15px;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.5)}
-.pin-stem{width:2px;height:22px}
+.pin-stem{width:2px;height:18px}
 .pin-tag{font-size:8px;font-weight:700;padding:2px 7px;border-radius:8px;background:rgba(0,0,0,.72);border:1px solid;white-space:nowrap;margin-top:2px;letter-spacing:.03em}
-
-.area-card{position:absolute;z-index:20;width:200px;border-radius:11px;overflow:hidden;border:1px solid rgba(255,255,255,.18);background:rgba(6,6,18,.92);backdrop-filter:blur(6px);animation:flipIn .32s cubic-bezier(.22,1.6,.46,1) both;transform-origin:bottom center;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.area-card{position:absolute;z-index:20;width:230px;border-radius:11px;overflow:hidden;border:1px solid rgba(255,255,255,.18);background:rgba(6,6,18,.94);animation:flipIn .32s cubic-bezier(.22,1.6,.46,1) both;transform-origin:top left;box-shadow:0 8px 32px rgba(0,0,0,.5)}
 .area-card.hidden{display:none}
-@keyframes flipIn{0%{opacity:0;transform:perspective(500px) rotateX(-28deg) scale(.88)}100%{opacity:1;transform:perspective(500px) rotateX(0) scale(1)}}
-.card-head{display:flex;align-items:center;gap:8px;padding:8px 10px}
-.card-icon-circle{width:26px;height:26px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.card-icon-circle i{font-size:14px}
-.card-title{font-size:11px;font-weight:600;color:#fff;flex:1;line-height:1.2}
-.card-badge{font-size:9px;background:rgba(255,255,255,.2);color:#fff;padding:1px 7px;border-radius:10px;white-space:nowrap;font-weight:600}
-.card-close{background:none;border:none;color:rgba(255,255,255,.55);cursor:pointer;font-size:14px;padding:0 2px;line-height:1}
+@keyframes flipIn{0%{opacity:0;transform:perspective(500px) rotateX(-20deg) scale(.9)}100%{opacity:1;transform:perspective(500px) rotateX(0) scale(1)}}
+.card-head{display:flex;align-items:center;gap:8px;padding:10px 12px}
+.card-icon-circle{width:28px;height:28px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card-icon-circle i{font-size:15px}
+.card-title{font-size:13px;font-weight:700;color:#fff;flex:1;line-height:1.2}
+.card-badge{font-size:10px;background:rgba(255,255,255,.2);color:#fff;padding:2px 8px;border-radius:10px;white-space:nowrap;font-weight:600}
+.card-close{background:none;border:none;color:rgba(255,255,255,.55);cursor:pointer;font-size:15px;padding:0 2px;line-height:1}
 .card-close:hover{color:#fff}
-.card-list{list-style:none;padding:6px 10px 10px;margin:0;border-top:1px solid rgba(255,255,255,.1)}
-.card-list li{font-size:10px;padding:3px 0;color:rgba(255,255,255,.82);display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,.05)}
+.card-list{list-style:none;padding:7px 12px 11px;margin:0;border-top:1px solid rgba(255,255,255,.1)}
+.card-list li{font-size:11px;padding:4px 0;color:rgba(255,255,255,.88);display:flex;align-items:center;gap:7px;border-bottom:1px solid rgba(255,255,255,.05)}
 .card-list li:last-child{border-bottom:none}
-.card-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--ic);flex-shrink:0}
-
-.bottom-bar{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.74);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:space-between;padding:6px 16px}
-.kpis{display:flex;gap:18px}
+.card-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--ic);flex-shrink:0}
+.bottom-bar{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.72);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:space-between;padding:6px 14px}
+.kpis{display:flex;gap:16px}
 .kpi{text-align:center}
-.kpi-n{font-size:17px;font-weight:700;line-height:1}
+.kpi-n{font-size:16px;font-weight:700;line-height:1}
 .kpi-l{font-size:7px;color:rgba(255,255,255,.38);letter-spacing:.07em;text-transform:uppercase;margin-top:1px}
-.sice{display:flex;gap:12px}
+.sice{display:flex;gap:10px}
 .sl{text-align:center}
-.sl-letter{font-size:14px;font-weight:700;display:block;line-height:1}
+.sl-letter{font-size:13px;font-weight:700;display:block;line-height:1}
 .sl-word{font-size:7px;color:rgba(255,255,255,.3);display:block;letter-spacing:.04em;margin-top:1px}
-.hint-bar{position:absolute;bottom:46px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.58);color:rgba(255,255,255,.52);font-size:9px;padding:3px 14px;border-radius:10px;pointer-events:none;white-space:nowrap;transition:opacity .5s;letter-spacing:.03em}
+.hint-bar{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.55);color:rgba(255,255,255,.5);font-size:9px;padding:3px 13px;border-radius:10px;pointer-events:none;white-space:nowrap;transition:opacity .5s}
 </style>
 </head><body>
 <div class="mpm-wrap">
@@ -54,133 +51,141 @@ body{background:#000;font-family:system-ui,sans-serif}
   <div class="overlay"></div>
   <div class="scene" id="scene">
     <div class="header">
-      <div>
-        <div class="header-brand">mpm</div>
-        <div class="header-sub">Sub-gerencia de Innovación · mpm.cl</div>
-      </div>
+      <div><div class="header-brand">mpm</div><div class="header-sub">Sub-gerencia de Innovación · mpm.cl</div></div>
       <div class="header-tag">Diagnóstico inicial · 2026</div>
     </div>
-    
+
     <div class="pin" id="pin-tierra" style="left:22%;top:54%" data-id="tierra">
       <div class="pin-pulse" style="--pc:#BA7517"></div>
-      <div class="pin-dot" style="background:#BA7517">
-        <i class="ti ti-shovel" aria-hidden="true"></i>
-      </div>
+      <div class="pin-dot" style="background:#BA7517"><i class="ti ti-shovel"></i></div>
       <div class="pin-stem" style="background:#BA7517"></div>
       <div class="pin-tag" style="border-color:#BA7517;color:#EF9F27">Mov. de tierra</div>
     </div>
-
     <div class="pin" id="pin-rental" style="left:43%;top:70%" data-id="rental">
       <div class="pin-pulse" style="--pc:#534AB7"></div>
-      <div class="pin-dot" style="background:#534AB7">
-        <i class="ti ti-truck" aria-hidden="true"></i>
-      </div>
+      <div class="pin-dot" style="background:#534AB7"><i class="ti ti-truck"></i></div>
       <div class="pin-stem" style="background:#534AB7"></div>
       <div class="pin-tag" style="border-color:#534AB7;color:#AFA9EC">Rental</div>
     </div>
-
     <div class="pin" id="pin-construccion" style="left:74%;top:28%" data-id="construccion">
       <div class="pin-pulse" style="--pc:#A32D2D"></div>
-      <div class="pin-dot" style="background:#A32D2D">
-        <i class="ti ti-hammer" aria-hidden="true"></i>
-      </div>
+      <div class="pin-dot" style="background:#A32D2D"><i class="ti ti-hammer"></i></div>
       <div class="pin-stem" style="background:#A32D2D"></div>
       <div class="pin-tag" style="border-color:#A32D2D;color:#F09595">Const. y montaje</div>
     </div>
-
-    <div class="pin" id="pin-rrhh" style="left:28%;top:44%" data-id="rrhh">
+    <div class="pin" id="pin-rrhh" style="left:18%;top:44%" data-id="rrhh">
       <div class="pin-pulse" style="--pc:#0F6E56"></div>
-      <div class="pin-dot" style="background:#0F6E56">
-        <i class="ti ti-users" aria-hidden="true"></i>
-      </div>
+      <div class="pin-dot" style="background:#0F6E56"><i class="ti ti-users"></i></div>
       <div class="pin-stem" style="background:#0F6E56"></div>
       <div class="pin-tag" style="border-color:#0F6E56;color:#9FE1CB">RR.HH.</div>
     </div>
-
     <div class="pin" id="pin-finanzas" style="left:46%;top:55%" data-id="finanzas">
       <div class="pin-pulse" style="--pc:#3B6D11"></div>
-      <div class="pin-dot" style="background:#3B6D11">
-        <i class="ti ti-receipt" aria-hidden="true"></i>
-      </div>
+      <div class="pin-dot" style="background:#3B6D11;font-weight:700;font-size:16px">$</div>
       <div class="pin-stem" style="background:#3B6D11"></div>
       <div class="pin-tag" style="border-color:#3B6D11;color:#C0DD97">Finanzas</div>
     </div>
-
     <div class="pin" id="pin-calidad" style="left:61%;top:52%" data-id="calidad">
       <div class="pin-pulse" style="--pc:#185FA5"></div>
-      <div class="pin-dot" style="background:#185FA5">
-        <i class="ti ti-ruler" aria-hidden="true"></i>
-      </div>
+      <div class="pin-dot" style="background:#185FA5"><i class="ti ti-ruler"></i></div>
       <div class="pin-stem" style="background:#185FA5"></div>
       <div class="pin-tag" style="border-color:#185FA5;color:#85B7EB">Calidad</div>
     </div>
 
-    
-    <div class="area-card hidden" id="card-tierra" data-id="tierra" style="left:3%;top:10%">
+    <div class="area-card hidden" id="card-tierra">
       <div class="card-head" style="background:#BA7517">
-        <div class="card-icon-circle"><i class="ti ti-shovel" aria-hidden="true"></i></div>
-        <span class="card-title">Movimiento de tierra</span>
-        <span class="card-badge">3</span>
-        <button class="card-close" data-id="tierra" aria-label="Cerrar">&#x2715;</button>
+        <div class="card-icon-circle"><i class="ti ti-shovel" style="color:#BA7517"></i></div>
+        <span class="card-title">Movimiento de tierra</span><span class="card-badge">3</span>
+        <button class="card-close" data-id="tierra">&#x2715;</button>
       </div>
-      <ul class="card-list"><li style="--ic:#EF9F27">Reportes automáticos</li><li style="--ic:#EF9F27">Plan de transporte</li><li style="--ic:#EF9F27">Disminución de polvo en suspensión</li></ul>
+      <ul class="card-list">
+        <li style="--ic:#EF9F27">Reportes automáticos</li>
+        <li style="--ic:#EF9F27">Plan de transporte</li>
+        <li style="--ic:#EF9F27">Disminución de polvo en suspensión</li>
+      </ul>
     </div>
 
-    <div class="area-card hidden" id="card-rental" data-id="rental" style="left:26%;top:60%">
+    <div class="area-card hidden" id="card-rental">
       <div class="card-head" style="background:#534AB7">
-        <div class="card-icon-circle"><i class="ti ti-truck" aria-hidden="true"></i></div>
-        <span class="card-title">Rental</span>
-        <span class="card-badge">7</span>
-        <button class="card-close" data-id="rental" aria-label="Cerrar">&#x2715;</button>
+        <div class="card-icon-circle"><i class="ti ti-truck" style="color:#534AB7"></i></div>
+        <span class="card-title">Rental</span><span class="card-badge">8</span>
+        <button class="card-close" data-id="rental">&#x2715;</button>
       </div>
-      <ul class="card-list"><li style="--ic:#AFA9EC">Control de horas máquina</li><li style="--ic:#AFA9EC">Telemetría</li><li style="--ic:#AFA9EC">Mantención prev. y predictiva</li><li style="--ic:#AFA9EC">Disponibilidad de equipos</li><li style="--ic:#AFA9EC">Capacitación operadores</li><li style="--ic:#AFA9EC">Dejar de ser commodity</li><li style="--ic:#AFA9EC">Control bodega / ingreso</li></ul>
+      <ul class="card-list">
+        <li style="--ic:#AFA9EC">Control de horas máquina</li>
+        <li style="--ic:#AFA9EC">Telemetría</li>
+        <li style="--ic:#AFA9EC">Mantención prev. y predictiva</li>
+        <li style="--ic:#AFA9EC">Disponibilidad de equipos</li>
+        <li style="--ic:#AFA9EC">Capacitación operadores</li>
+        <li style="--ic:#AFA9EC">Dejar de ser commodity</li>
+        <li style="--ic:#AFA9EC">Control bodega</li>
+        <li style="--ic:#AFA9EC">Registro maquinaria</li>
+      </ul>
     </div>
 
-    <div class="area-card hidden" id="card-construccion" data-id="construccion" style="left:50%;top:4%">
+    <div class="area-card hidden" id="card-construccion">
       <div class="card-head" style="background:#A32D2D">
-        <div class="card-icon-circle"><i class="ti ti-hammer" aria-hidden="true"></i></div>
-        <span class="card-title">Construcción y montaje</span>
-        <span class="card-badge">7</span>
-        <button class="card-close" data-id="construccion" aria-label="Cerrar">&#x2715;</button>
+        <div class="card-icon-circle"><i class="ti ti-hammer" style="color:#A32D2D"></i></div>
+        <span class="card-title">Construcción y montaje</span><span class="card-badge">8</span>
+        <button class="card-close" data-id="construccion">&#x2715;</button>
       </div>
-      <ul class="card-list"><li style="--ic:#F09595">Eficiencia</li><li style="--ic:#F09595">Control en terreno</li><li style="--ic:#F09595">Factor de productividad FP</li><li style="--ic:#F09595">Disminuir HH</li><li style="--ic:#F09595">Seguridad</li><li style="--ic:#F09595">Control de proyecto</li><li style="--ic:#F09595">Trazabilidad herramientas</li></ul>
+      <ul class="card-list">
+        <li style="--ic:#F09595">Eficiencia</li>
+        <li style="--ic:#F09595">Control en terreno</li>
+        <li style="--ic:#F09595">Factor de productividad FP</li>
+        <li style="--ic:#F09595">Disminuir HH</li>
+        <li style="--ic:#F09595">Seguridad</li>
+        <li style="--ic:#F09595">Control de proyecto</li>
+        <li style="--ic:#F09595">Trazabilidad herramientas</li>
+        <li style="--ic:#F09595">Datos técnicos proyecto</li>
+      </ul>
     </div>
 
-    <div class="area-card hidden" id="card-rrhh" data-id="rrhh" style="left:3%;top:44%">
+    <div class="area-card hidden" id="card-rrhh">
       <div class="card-head" style="background:#0F6E56">
-        <div class="card-icon-circle"><i class="ti ti-users" aria-hidden="true"></i></div>
-        <span class="card-title">Recursos Humanos</span>
-        <span class="card-badge">4</span>
-        <button class="card-close" data-id="rrhh" aria-label="Cerrar">&#x2715;</button>
+        <div class="card-icon-circle"><i class="ti ti-users" style="color:#0F6E56"></i></div>
+        <span class="card-title">Recursos Humanos</span><span class="card-badge">4</span>
+        <button class="card-close" data-id="rrhh">&#x2715;</button>
       </div>
-      <ul class="card-list"><li style="--ic:#9FE1CB">Reclutamiento</li><li style="--ic:#9FE1CB">Control almuerzos / alojamiento</li><li style="--ic:#9FE1CB">Gestión de viajes</li><li style="--ic:#9FE1CB">Gestión de acreditaciones</li></ul>
+      <ul class="card-list">
+        <li style="--ic:#9FE1CB">Reclutamiento</li>
+        <li style="--ic:#9FE1CB">Control almuerzos / alojamiento</li>
+        <li style="--ic:#9FE1CB">Gestión de viajes</li>
+        <li style="--ic:#9FE1CB">Gestión de acreditaciones</li>
+      </ul>
     </div>
 
-    <div class="area-card hidden" id="card-finanzas" data-id="finanzas" style="left:30%;top:8%">
+    <div class="area-card hidden" id="card-finanzas">
       <div class="card-head" style="background:#3B6D11">
-        <div class="card-icon-circle"><i class="ti ti-receipt" aria-hidden="true"></i></div>
-        <span class="card-title">Finanzas</span>
-        <span class="card-badge">2</span>
-        <button class="card-close" data-id="finanzas" aria-label="Cerrar">&#x2715;</button>
+        <div class="card-icon-circle" style="font-size:16px;font-weight:700;color:#3B6D11;display:flex;align-items:center;justify-content:center">$</div>
+        <span class="card-title">Finanzas</span><span class="card-badge">2</span>
+        <button class="card-close" data-id="finanzas">&#x2715;</button>
       </div>
-      <ul class="card-list"><li style="--ic:#C0DD97">Rendiciones</li><li style="--ic:#C0DD97">Control de gastos</li></ul>
+      <ul class="card-list">
+        <li style="--ic:#C0DD97">Rendiciones</li>
+        <li style="--ic:#C0DD97">Control de gastos</li>
+      </ul>
     </div>
 
-    <div class="area-card hidden" id="card-calidad" data-id="calidad" style="left:60%;top:52%">
+    <div class="area-card hidden" id="card-calidad">
       <div class="card-head" style="background:#185FA5">
-        <div class="card-icon-circle"><i class="ti ti-ruler" aria-hidden="true"></i></div>
-        <span class="card-title">Calidad</span>
-        <span class="card-badge">3</span>
-        <button class="card-close" data-id="calidad" aria-label="Cerrar">&#x2715;</button>
+        <div class="card-icon-circle"><i class="ti ti-ruler" style="color:#185FA5"></i></div>
+        <span class="card-title">Calidad</span><span class="card-badge">3</span>
+        <button class="card-close" data-id="calidad">&#x2715;</button>
       </div>
-      <ul class="card-list"><li style="--ic:#85B7EB">Procedimientos</li><li style="--ic:#85B7EB">Digitalización de documentos</li><li style="--ic:#85B7EB">Medición eficiente</li></ul>
+      <ul class="card-list">
+        <li style="--ic:#85B7EB">Procedimientos</li>
+        <li style="--ic:#85B7EB">Digitalización de documentos</li>
+        <li style="--ic:#85B7EB">Medición eficiente</li>
+      </ul>
     </div>
 
     <div class="hint-bar" id="hint">Toca un área de la faena para ver los dolores</div>
+
     <div class="bottom-bar">
       <div class="kpis">
         <div class="kpi"><div class="kpi-n" style="color:#E8500A">6</div><div class="kpi-l">Áreas</div></div>
-        <div class="kpi"><div class="kpi-n" style="color:#AFA9EC">23</div><div class="kpi-l">Dolores</div></div>
+        <div class="kpi"><div class="kpi-n" style="color:#AFA9EC">25</div><div class="kpi-l">Dolores</div></div>
         <div class="kpi"><div class="kpi-n" style="color:#9FE1CB">15</div><div class="kpi-l">Iniciativas</div></div>
         <div class="kpi"><div class="kpi-n" style="color:#85B7EB">4</div><div class="kpi-l">Etapas SICE</div></div>
       </div>
@@ -194,6 +199,26 @@ body{background:#000;font-family:system-ui,sans-serif}
   </div>
 </div>
 <script>
+const CARD_W=230;
+const CARD_H_EST={tierra:120,rental:265,construccion:265,rrhh:155,finanzas:100,calidad:120};
+const MARGIN=8;
+function placeCard(pin,card){
+  const wrap=document.querySelector('.mpm-wrap');
+  const wW=wrap.offsetWidth,wH=wrap.offsetHeight;
+  const pr=pin.getBoundingClientRect(),wr=wrap.getBoundingClientRect();
+  const pinCx=pr.left-wr.left+pr.width/2;
+  const pinTop=pr.top-wr.top;
+  const estH=CARD_H_EST[card.dataset.id]||160;
+  let left=pinCx+10;
+  if(left+CARD_W>wW-MARGIN) left=pinCx-CARD_W-10;
+  if(left<MARGIN) left=MARGIN;
+  let top=pinTop-estH-10;
+  if(top<36) top=pinTop+10;
+  if(top+estH>wH-44) top=wH-44-estH-MARGIN;
+  if(top<36) top=36;
+  card.style.left=left+'px';
+  card.style.top=top+'px';
+}
 document.querySelectorAll('.pin').forEach(pin=>{
   pin.addEventListener('click',e=>{
     e.stopPropagation();
@@ -201,7 +226,7 @@ document.querySelectorAll('.pin').forEach(pin=>{
     const card=document.getElementById('card-'+id);
     const wasHidden=card.classList.contains('hidden');
     document.querySelectorAll('.area-card').forEach(c=>c.classList.add('hidden'));
-    if(wasHidden) card.classList.remove('hidden');
+    if(wasHidden){card.classList.remove('hidden');placeCard(pin,card);}
     document.getElementById('hint').style.opacity='0';
   });
 });
