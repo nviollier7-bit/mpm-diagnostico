@@ -85,6 +85,12 @@ body{background:#000;font-family:system-ui,sans-serif}
       <div class="pin-stem" style="background:#3B6D11"></div>
       <div class="pin-tag" style="border-color:#3B6D11;color:#C0DD97">Finanzas</div>
     </div>
+    <div class="pin" id="pin-hse" style="left:38%;top:39%" data-id="hse">
+      <div class="pin-pulse" style="--pc:#B85C00"></div>
+      <div class="pin-dot" style="background:#B85C00;display:flex;align-items:center;justify-content:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -10 110 135" width="17" height="17"><path d="m96.875 62.5v11.438l-24.344 10.438h-45.062l-24.344-10.438v-11.438zm-40.625-46.875h-12.5v40.625h12.5zm6.25 5.0938v35.531h28c-0.60938-8.0352-3.5977-15.703-8.5859-22.031-4.9883-6.3281-11.746-11.027-19.414-13.5zm-25 0c-7.668 2.4727-14.426 7.1719-19.414 13.5-4.9883 6.3281-7.9766 13.996-8.5859 22.031h28z" fill="white"/></svg></div>
+      <div class="pin-stem" style="background:#B85C00"></div>
+      <div class="pin-tag" style="border-color:#B85C00;color:#FFAA5C">HSE</div>
+    </div>
     <div class="pin" id="pin-calidad" style="left:61%;top:52%" data-id="calidad">
       <div class="pin-pulse" style="--pc:#185FA5"></div>
       <div class="pin-dot" style="background:#185FA5"><i class="ti ti-ruler"></i></div>
@@ -126,7 +132,7 @@ body{background:#000;font-family:system-ui,sans-serif}
     <div class="area-card hidden" id="card-construccion">
       <div class="card-head" style="background:#A32D2D">
         <div class="card-icon-circle"><i class="ti ti-hammer" style="color:#A32D2D"></i></div>
-        <span class="card-title">Construcción y montaje</span><span class="card-badge">8</span>
+        <span class="card-title">Construcción y montaje</span><span class="card-badge">7</span>
         <button class="card-close" data-id="construccion">&#x2715;</button>
       </div>
       <ul class="card-list">
@@ -134,7 +140,6 @@ body{background:#000;font-family:system-ui,sans-serif}
         <li style="--ic:#F09595">Control en terreno</li>
         <li style="--ic:#F09595">Factor de productividad FP</li>
         <li style="--ic:#F09595">Disminuir HH</li>
-        <li style="--ic:#F09595">Seguridad</li>
         <li style="--ic:#F09595">Trazabilidad del proyecto</li>
         <li style="--ic:#F09595">Herramientas de construcción</li>
         <li style="--ic:#F09595">Datos técnicos proyecto</li>
@@ -180,12 +185,28 @@ body{background:#000;font-family:system-ui,sans-serif}
       </ul>
     </div>
 
+    <div class="area-card hidden" id="card-hse">
+      <div class="card-head" style="background:#B85C00">
+        <div class="card-icon-circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -10 110 135" width="15" height="15"><path d="m96.875 62.5v11.438l-24.344 10.438h-45.062l-24.344-10.438v-11.438zm-40.625-46.875h-12.5v40.625h12.5zm6.25 5.0938v35.531h28c-0.60938-8.0352-3.5977-15.703-8.5859-22.031-4.9883-6.3281-11.746-11.027-19.414-13.5zm-25 0c-7.668 2.4727-14.426 7.1719-19.414 13.5-4.9883 6.3281-7.9766 13.996-8.5859 22.031h28z" fill="#B85C00"/></svg></div>
+        <span class="card-title">HSE</span><span class="card-badge">6</span>
+        <button class="card-close" data-id="hse">&#x2715;</button>
+      </div>
+      <ul class="card-list">
+        <li style="--ic:#FFAA5C">Acciones preventivas</li>
+        <li style="--ic:#FFAA5C">Reducir la accidentabilidad</li>
+        <li style="--ic:#FFAA5C">Cultura de seguridad</li>
+        <li style="--ic:#FFAA5C">Cero Accidentes</li>
+        <li style="--ic:#FFAA5C">Integrar datos</li>
+        <li style="--ic:#FFAA5C">Control y detección de riesgos</li>
+      </ul>
+    </div>
+
     <div class="hint-bar" id="hint">Toca un área de la faena para ver los dolores</div>
 
     <div class="bottom-bar">
       <div class="kpis">
-        <div class="kpi"><div class="kpi-n" style="color:#E8500A">6</div><div class="kpi-l">Áreas</div></div>
-        <div class="kpi"><div class="kpi-n" style="color:#AFA9EC">25</div><div class="kpi-l">Dolores</div></div>
+        <div class="kpi"><div class="kpi-n" style="color:#E8500A">7</div><div class="kpi-l">Áreas</div></div>
+        <div class="kpi"><div class="kpi-n" style="color:#AFA9EC">30</div><div class="kpi-l">Dolores</div></div>
         <div class="kpi"><div class="kpi-n" style="color:#9FE1CB">15</div><div class="kpi-l">Iniciativas</div></div>
         <div class="kpi"><div class="kpi-n" style="color:#85B7EB">4</div><div class="kpi-l">Etapas SICE</div></div>
       </div>
@@ -200,7 +221,7 @@ body{background:#000;font-family:system-ui,sans-serif}
 </div>
 <script>
 const CARD_W=230;
-const CARD_H_EST={tierra:120,rental:265,construccion:265,rrhh:155,finanzas:100,calidad:120};
+const CARD_H_EST={tierra:120,rental:265,construccion:240,rrhh:155,finanzas:100,calidad:120,hse:210};
 const MARGIN=8;
 function placeCard(pin,card){
   const wrap=document.querySelector('.mpm-wrap');
