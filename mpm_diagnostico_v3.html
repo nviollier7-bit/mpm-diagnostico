@@ -91,6 +91,12 @@ body{background:#000;font-family:system-ui,sans-serif}
       <div class="pin-stem" style="background:#B85C00"></div>
       <div class="pin-tag" style="border-color:#B85C00;color:#FFAA5C">HSE</div>
     </div>
+    <div class="pin" id="pin-estudio" style="left:63%;top:32%" data-id="estudio">
+      <div class="pin-pulse" style="--pc:#2D8A5F"></div>
+      <div class="pin-dot" style="background:#2D8A5F;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M5 3 Q3 3 3 5 L3 19 Q3 21 5 21"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="8" y1="14" x2="12" y2="14"/></svg></div>
+      <div class="pin-stem" style="background:#2D8A5F"></div>
+      <div class="pin-tag" style="border-color:#2D8A5F;color:#7ECBA3">Estudio</div>
+    </div>
     <div class="pin" id="pin-calidad" style="left:61%;top:52%" data-id="calidad">
       <div class="pin-pulse" style="--pc:#185FA5"></div>
       <div class="pin-dot" style="background:#185FA5"><i class="ti ti-ruler"></i></div>
@@ -125,14 +131,13 @@ body{background:#000;font-family:system-ui,sans-serif}
         <li style="--ic:#AFA9EC">Capacitación operadores</li>
         <li style="--ic:#AFA9EC">Dejar de ser commodity</li>
         <li style="--ic:#AFA9EC">Control bodega</li>
-        <li style="--ic:#AFA9EC">Registro maquinaria</li>
       </ul>
     </div>
 
     <div class="area-card hidden" id="card-construccion">
       <div class="card-head" style="background:#A32D2D">
         <div class="card-icon-circle"><i class="ti ti-hammer" style="color:#A32D2D"></i></div>
-        <span class="card-title">Construcción y montaje</span><span class="card-badge">7</span>
+        <span class="card-title">Construcción y montaje</span><span class="card-badge">6</span>
         <button class="card-close" data-id="construccion">&#x2715;</button>
       </div>
       <ul class="card-list">
@@ -141,8 +146,7 @@ body{background:#000;font-family:system-ui,sans-serif}
         <li style="--ic:#F09595">Factor de productividad FP</li>
         <li style="--ic:#F09595">Disminuir HH</li>
         <li style="--ic:#F09595">Trazabilidad del proyecto</li>
-        <li style="--ic:#F09595">Herramientas de construcción</li>
-        <li style="--ic:#F09595">Datos técnicos proyecto</li>
+        <li style="--ic:#F09595">Disponibilizar información técnica</li>
       </ul>
     </div>
 
@@ -167,7 +171,7 @@ body{background:#000;font-family:system-ui,sans-serif}
         <button class="card-close" data-id="finanzas">&#x2715;</button>
       </div>
       <ul class="card-list">
-        <li style="--ic:#C0DD97">Rendiciones</li>
+        <li style="--ic:#C0DD97">Gestión de rendiciones</li>
         <li style="--ic:#C0DD97">Control de gastos</li>
       </ul>
     </div>
@@ -179,7 +183,7 @@ body{background:#000;font-family:system-ui,sans-serif}
         <button class="card-close" data-id="calidad">&#x2715;</button>
       </div>
       <ul class="card-list">
-        <li style="--ic:#85B7EB">Procedimientos</li>
+        <li style="--ic:#85B7EB">Procedimientos accesibles</li>
         <li style="--ic:#85B7EB">Digitalización de documentos</li>
         <li style="--ic:#85B7EB">Medición eficiente</li>
       </ul>
@@ -201,12 +205,28 @@ body{background:#000;font-family:system-ui,sans-serif}
       </ul>
     </div>
 
+    <div class="area-card hidden" id="card-estudio">
+      <div class="card-head" style="background:#2D8A5F">
+        <div class="card-icon-circle"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#2D8A5F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M5 3 Q3 3 3 5 L3 19 Q3 21 5 21"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="8" y1="14" x2="12" y2="14"/></svg></div>
+        <span class="card-title">Estudio</span><span class="card-badge">5</span>
+        <button class="card-close" data-id="estudio">&#x2715;</button>
+      </div>
+      <ul class="card-list">
+        <li style="--ic:#7ECBA3">Obtener data histórica proyectos</li>
+        <li style="--ic:#7ECBA3">Proyectar con bases claras</li>
+        <li style="--ic:#7ECBA3">Acelerar proceso de estudio</li>
+        <li style="--ic:#7ECBA3">Mejorar proyección tiempo y costo</li>
+        <li style="--ic:#7ECBA3">Mayor sinergía con administradores</li>
+      </ul>
+    </div>
+
+
     <div class="hint-bar" id="hint">Toca un área de la faena para ver los dolores</div>
 
     <div class="bottom-bar">
       <div class="kpis">
-        <div class="kpi"><div class="kpi-n" style="color:#E8500A">7</div><div class="kpi-l">Áreas</div></div>
-        <div class="kpi"><div class="kpi-n" style="color:#AFA9EC">30</div><div class="kpi-l">Dolores</div></div>
+        <div class="kpi"><div class="kpi-n" style="color:#E8500A">8</div><div class="kpi-l">Áreas</div></div>
+        <div class="kpi"><div class="kpi-n" style="color:#AFA9EC">35</div><div class="kpi-l">Dolores</div></div>
         <div class="kpi"><div class="kpi-n" style="color:#9FE1CB">15</div><div class="kpi-l">Iniciativas</div></div>
         <div class="kpi"><div class="kpi-n" style="color:#85B7EB">4</div><div class="kpi-l">Etapas SICE</div></div>
       </div>
@@ -221,7 +241,7 @@ body{background:#000;font-family:system-ui,sans-serif}
 </div>
 <script>
 const CARD_W=230;
-const CARD_H_EST={tierra:120,rental:265,construccion:240,rrhh:155,finanzas:100,calidad:120,hse:210};
+const CARD_H_EST={tierra:120,rental:265,construccion:240,rrhh:155,finanzas:100,calidad:120,hse:210,estudio:210};
 const MARGIN=8;
 function placeCard(pin,card){
   const wrap=document.querySelector('.mpm-wrap');
